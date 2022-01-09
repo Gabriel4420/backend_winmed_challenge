@@ -2,7 +2,6 @@ const express = require('express')
 const cors = require('cors')
 const morgan = require('morgan')
 const routes = require('./routes')
-const bodyParser = require('body-parser')
 
 require('./config/conn')
 
@@ -16,8 +15,7 @@ class App {
   }
 
   middlewares() {
-    this.app.use(bodyParser.json())
-    this.app.use(bodyParser.urlencoded({ extended: false }))
+    
     this.app.use(express.json())
     this.app.use(morgan('dev'))
     this.app.use((req, res, next) => {
