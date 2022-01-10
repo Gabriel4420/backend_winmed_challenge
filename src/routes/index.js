@@ -22,6 +22,7 @@ routes.patch('/update/doctor/:id',AuthMiddleware, DoctorController.update)
 routes.patch('/update/clinic/:id',AuthMiddleware, ClinicController.update)
 
 routes.post('/user', UserController.store)
+routes.post('/hello', () => alert('Hello!')),
 routes.get('/users', AuthMiddleware, UserController.show)
 
 routes.post('/login', LoginController.index)
