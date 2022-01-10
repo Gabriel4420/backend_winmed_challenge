@@ -4,8 +4,8 @@ const yup = require('yup')
 const mongoose = require('mongoose')
 
 class UserController {
-  async hello(res) {
-    return res.send("Rodando api")
+  async hello() {
+    return 'rodando api'
   }
 
   async show(req, res) {
