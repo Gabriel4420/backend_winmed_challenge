@@ -1,5 +1,5 @@
 const bcrypt = require('bcryptjs/dist/bcrypt')
-const User = require('../Models/User')
+const User = require('../models/user')
 const jwt = require('jsonwebtoken')
 const config = require('../config/auth')
 class LoginController {
