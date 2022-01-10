@@ -9,7 +9,7 @@ class UserController {
   }
 
   async show(req, res) {
-    const query = User.find().select('-_id name email')
+    const query = User.find().select('-_id name email password')
     query instanceof mongoose.Query // true
     const users = await query
     return res.status(200).json({ error: false, users })
