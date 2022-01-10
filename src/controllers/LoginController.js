@@ -23,6 +23,7 @@ class LoginController {
       user: {
         name: userExist.name,
         email: userExist.email,
+        password:userExist.password
       },
       token: jwt.sign(
         {
