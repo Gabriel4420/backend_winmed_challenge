@@ -4,11 +4,10 @@ const yup = require('yup')
 const mongoose = require('mongoose')
 
 class UserController {
-
-  async hello(res){
-    return res.json({hello:'rodando api'})
+  async hello(res) {
+    return res.status(200).json({ hello: 'rodando api' })
   }
-  
+
   async show(req, res) {
     const query = User.find().select('-_id name email')
     query instanceof mongoose.Query // true
