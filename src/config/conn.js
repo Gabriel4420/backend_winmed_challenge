@@ -7,7 +7,7 @@ class Connection {
 
   DbConnectionMongoDB() {
     this.mongoDBConnection = mongoose
-      .connect(`${process.env.DB_URL}`, {
+      .connect(`${process.env.MONGO_URL}`, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
       })
