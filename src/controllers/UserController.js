@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 
 class UserController {
   async hello(res) {
-    return res.send({ message: 'rodando api' })
+    return res.send("Rodando api")
   }
 
   async show(req, res) {
