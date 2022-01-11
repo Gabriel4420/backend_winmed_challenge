@@ -9,17 +9,17 @@ const routes = new Router()
 
 
 
-routes.post('/register/doctor',AuthMiddleware, DoctorController.store)
-routes.post('/register/clinic',AuthMiddleware, ClinicController.store)
+routes.post('/register_doctor',AuthMiddleware, DoctorController.store)
+routes.post('/register_clinic',AuthMiddleware, ClinicController.store)
 
 routes.get('/doctors',AuthMiddleware,DoctorController.show)
 routes.get('/clinics',AuthMiddleware,ClinicController.show)
 
-routes.delete('/delete/doctor/:id',AuthMiddleware, DoctorController.delete)
-routes.delete('/delete/clinic/:id',AuthMiddleware, ClinicController.delete)
+routes.delete('/delete_doctor/:id',AuthMiddleware, DoctorController.delete)
+routes.delete('/delete_clinic/:id',AuthMiddleware, ClinicController.delete)
 
-routes.patch('/update/doctor/:id',AuthMiddleware, DoctorController.update)
-routes.patch('/update/clinic/:id',AuthMiddleware, ClinicController.update)
+routes.patch('/update_doctor/:id',AuthMiddleware, DoctorController.update)
+routes.patch('/update_clinic/:id',AuthMiddleware, ClinicController.update)
 
 routes.post('/user', UserController.store)
 routes.get('/hello', UserController.hello),
