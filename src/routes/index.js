@@ -7,7 +7,7 @@ const ClinicController = require('../controllers/ClinicController')
 const AuthMiddleware = require('../middlewares/AuthMiddleware')
 const routes = new Router()
 
-
+/* o que vou fazer pra consertar isso */
 
 routes.post('/register_doctor',AuthMiddleware, DoctorController.store)
 routes.post('/register_clinic',AuthMiddleware, ClinicController.store)
