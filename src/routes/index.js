@@ -26,7 +26,7 @@ routes.patch('/update_clinic/:id', AuthMiddleware, ClinicController.update)
 routes.post('/user', UserController.store)
 routes.get('/hello', UserController.hello),
 routes.get('/users', AuthMiddleware, UserController.show)
-routes.get('/users', AuthMiddleware, UserController.showOne)
+routes.get('/user/:id', AuthMiddleware, UserController.showOne)
 
 routes.post('/login', LoginController.index)
 
