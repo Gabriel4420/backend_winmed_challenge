@@ -1,27 +1,50 @@
-# 📖 DOCUMENTAÇÃO 📖
+<p align="center">
+   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Gabriel4420/backend_winmed_challenge">
+
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Gabriel4420/backend_winmed_challenge?logo=html">
+
+  <img alt="GitHub repo size in bytes" src="https://img.shields.io/github/repo-size/Gabriel4420/backend_winmed_challenge?color=green">
+
+  <br>
+  
+  <a href="https://www.codacy.com/manual/Gabriel4420/backend_winmed_challenge?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Gabriel4420/backend_winmed_challenge&amp;utm_campaign=Badge_Grade">
+    <img src="https://app.codacy.com/project/badge/Grade/6dd6b46abeb14e99935a2b9ac5c6ede2"/>
+  </a>
+  
+  <img alt="GitHub code size in bytes" src="https://img.shields.io/github/last-commit/Gabriel4420/backend_winmed_challenge">
+
+  <a href="https://www.linkedin.com/in/gabriel-rodrigues-perez-2069b072/">
+    <img alt="Made by Gabriel" src="https://img.shields.io/badge/made%20by-Gabriel-%2304D361">
+  </a>
+</p>
+
+<h2 align="center"> 📖 DOCUMENTAÇÃO 📖</h2>
 
 API para o sistema medico de cadastro de medicos e clinicas, relacionada ao desafio da empresa winmed.
 
 Logo abaixo, segue as rotas da api que funcionam
 
-#### ⚠️ IMPORTANTE ⚠️
+<h1 align="center"> ⚠️ IMPORTANTE ⚠️ </h1>
 
 É importante gerar um token e se autenticar para poder usar as rotas abaixo:
 
 POST >> /login >> JSON-BODY
 
-| Verb | Action | url |
-| ------ | ------ |------ | 
-| GET | Get Users | '/users'  | 
-| GET | Get Doctors | '/doctors'  | 
-| GET | Get Clinics | '/clinics'  | 
-| POST | Add User | '/users' | 
-| POST | Add Clinic | '/register/clinic' | 
-| POST | Add Doctor | '/register/doctor' | 
-| PATCH |Update Clinic | '/update/clinic/:id' | 
-| PATCH |Update Doctor | '/update/doctor/:id' | 
-| DELETE |Delete Clinic | '/delete/clinic/:id' | 
-| DELETE |Delete Doctor | '/delete/doctor/:id' | 
+| Verb   | Action        | url                  |
+| ------ | ------------- | -------------------- |
+| GET    | Get Users     | '/users'             |
+| GET    | Get User      | '/user/:id'          |
+| GET    | Get Doctors   | '/doctors'           |
+| GET    | Get Doctor    | '/doctor/:id'        |
+| GET    | Get Clinics   | '/clinics'           |
+| GET    | Get Clinic    | '/clinic/:id'        |
+| POST   | Add User      | '/users'             |
+| POST   | Add Clinic    | '/register/clinic'   |
+| POST   | Add Doctor    | '/register/doctor'   |
+| PATCH  | Update Clinic | '/update/clinic/:id' |
+| PATCH  | Update Doctor | '/update/doctor/:id' |
+| DELETE | Delete Clinic | '/delete/clinic/:id' |
+| DELETE | Delete Doctor | '/delete/doctor/:id' |
 
 ## 👨‍💻️ Tecnogias utilizadas
 
@@ -30,13 +53,12 @@ O projeto foi desenvolvido utilizando a seguinte tecnologia:
 - [NodeJS](https://node.com.br)
 
 ### Padronização de código
- 
- - [Prettier](https://prettier.io/)
 
- ### IDE
+- [Prettier](https://prettier.io/)
 
-  - [Visual Studio Code](https://code.visualstudio.com/)
+### IDE
 
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 ## 📦️ Como utilizar o projeto
 
@@ -45,8 +67,9 @@ Para copiar o projeto, utilize os comandos:
 ```bash
   # Clonar o repositório
   ❯ git clone https://github.com/Gabriel4420/backend_winmed_challenge.git
-  
+
 ```
+
 Para instalar as dependências e iniciar o projeto, você pode utilizar o yarn ou npm:
 
 **Utilizando yarn**
@@ -56,17 +79,18 @@ Para instalar as dependências e iniciar o projeto, você pode utilizar o yarn o
   ❯ yarn
   # rodar projeto
   ❯ yarn dev
- ```
+```
 
 **Utilizando npm**
 
 ```bash
   # Atualizar as dependências
-  ❯ npm install 
+  ❯ npm install
 
   # Iniciar o projeto
   ❯ npm dev
 ```
+
 <h4 align="center">
   Feito com ❤️ por Gabriel Rodrigues 👋️ <a href="mailto:gabriel_rodrigues_perez@hotmail.com">Entre em contato!</a>
 </h4>

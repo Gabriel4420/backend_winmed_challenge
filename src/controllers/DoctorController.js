@@ -10,6 +10,16 @@ class DoctorController {
     return res.status(200).json({ error: false, doctors })
   }
 
+  async showOne(req, res) {
+    const id = req.params.id
+    const query = Doctor.findOne({ _id: id }).select(
+      '-_id -__v -createdAt -updatedAt',
+    )
+    query instanceof mongoose.Query // true
+    const doctor = await query
+    return res.status(200).json({ error: false, doctor })
+  }
+
   async store(req, res) {
     //todo: validação dos dados
     let schema = yup.object().shape({
