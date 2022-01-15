@@ -41,10 +41,10 @@ POST >> /login >> JSON-BODY
 | POST   | Add User      | '/users'             |
 | POST   | Add Clinic    | '/register/clinic'   |
 | POST   | Add Doctor    | '/register/doctor'   |
-| PATCH  | Update Clinic | '/update/clinic/:id' |
-| PATCH  | Update Doctor | '/update/doctor/:id' |
-| DELETE | Delete Clinic | '/delete/clinic/:id' |
-| DELETE | Delete Doctor | '/delete/doctor/:id' |
+| PATCH  | Update Clinic | '/update_clinic/:id' |
+| PATCH  | Update Doctor | '/update_doctor/:id' |
+| DELETE | Delete Clinic | '/delete_clinic/:id' |
+| DELETE | Delete Doctor | '/delete_doctor/:id' |
 
 ## 👨‍💻️ Tecnogias utilizadas
 
