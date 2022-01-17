@@ -53,12 +53,13 @@ class DoctorController {
     if (doctorExist) {
       res.status(400).json({
         error: true,
-        message: 'Existing product! please create a non-existing product  ',
+        message: 'Existing Doctor! please create a non-existing doctor  ',
       })
     } else {
       // Desestruturação dos dados da requisição
-      const idDoctor = req.params.id
+     
       const {
+        idDoctor = req.params.id,
         name,
         sex,
         age,
@@ -102,6 +103,7 @@ class DoctorController {
               message: 'Successfully registered doctor ',
             })
       })
+    
     }
   }
   async update(req, res) {
