@@ -21,6 +21,7 @@ class DoctorController {
   }
 
   async store(req, res) {
+  
     //todo: validação dos dados
     let schema = yup.object().shape({
       idDoctor: yup.string(),
@@ -103,6 +104,8 @@ class DoctorController {
               message: 'Successfully registered doctor ',
             })
       })
+
+      Doctor.updateOne({ _id: data.idDoctor }, data)
     
     }
   }
