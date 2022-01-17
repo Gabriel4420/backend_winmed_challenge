@@ -2,6 +2,9 @@ const mongoose = require('mongoose')
 
 const Doctor = mongoose.Schema(
   {
+    idDoctor:{
+      type:String,
+    },
     name: {
       type: String,
       required: true,

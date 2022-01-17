@@ -23,6 +23,7 @@ class DoctorController {
   async store(req, res) {
     //todo: validação dos dados
     let schema = yup.object().shape({
+      idDoctor: yup.string(),
       name: yup.string().required(),
       sex: yup.string().required(),
       age: yup.number().required(),
@@ -56,6 +57,7 @@ class DoctorController {
       })
     } else {
       // Desestruturação dos dados da requisição
+      const idDoctor = req.params.id
       const {
         name,
         sex,
@@ -72,6 +74,7 @@ class DoctorController {
       } = req.body
 
       const data = {
+        idDoctor,
         name,
         sex,
         age,
@@ -88,7 +91,7 @@ class DoctorController {
 
       //Inserção de doutor no MongoDB
 
-      await Doctor.create(data, (error) => {
+      Doctor.create(data, (error) => {
         error
           ? res.status(400).json({
               error: true,
@@ -102,7 +105,9 @@ class DoctorController {
     }
   }
   async update(req, res) {
+    const id_verify = req.params.id
     const {
+      idDoctor = req.params.id,
       name,
       sex,
       age,
@@ -117,9 +122,8 @@ class DoctorController {
       crm,
     } = req.body
 
-    const id = req.params.id
-
     const doctor = {
+      idDoctor,
       name,
       sex,
       age,
@@ -136,6 +140,7 @@ class DoctorController {
 
     //todo: validação dos dados
     let schema = yup.object().shape({
+      idDoctor: yup.string(),
       name: yup.string().required(),
       sex: yup.string().required(),
       age: yup.number().required(),
@@ -157,7 +162,7 @@ class DoctorController {
       })
     } else {
       try {
-        const updatedDoctor = await Doctor.updateOne({ _id: id }, doctor)
+        const updatedDoctor = await Doctor.updateOne({ _id: id_verify }, doctor)
 
         if (updatedDoctor.matchedCount === 0) {
           res.status(422).json({ message: 'Doutor não encontrado!' })
