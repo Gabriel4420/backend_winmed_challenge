@@ -21,10 +21,8 @@ class DoctorController {
   }
 
   async store(req, res) {
-  
     //todo: validação dos dados
     let schema = yup.object().shape({
-      idDoctor: yup.string(),
       name: yup.string().required(),
       sex: yup.string().required(),
       age: yup.number().required(),
@@ -58,9 +56,8 @@ class DoctorController {
       })
     } else {
       // Desestruturação dos dados da requisição
-     
+
       const {
-        idDoctor = req.params.id,
         name,
         sex,
         age,
@@ -76,7 +73,6 @@ class DoctorController {
       } = req.body
 
       const data = {
-        idDoctor,
         name,
         sex,
         age,
@@ -106,13 +102,11 @@ class DoctorController {
       })
 
       Doctor.updateOne({ _id: data.idDoctor }, data)
-    
     }
   }
   async update(req, res) {
     const id_verify = req.params.id
     const {
-      idDoctor = req.params.id,
       name,
       sex,
       age,
@@ -128,7 +122,7 @@ class DoctorController {
     } = req.body
 
     const doctor = {
-      idDoctor,
+
       name,
       sex,
       age,
@@ -145,7 +139,6 @@ class DoctorController {
 
     //todo: validação dos dados
     let schema = yup.object().shape({
-      idDoctor: yup.string(),
       name: yup.string().required(),
       sex: yup.string().required(),
       age: yup.number().required(),
@@ -180,11 +173,9 @@ class DoctorController {
       }
     }
   }
-  async delete(req, res) {
-    const id = req.params.id
-
+  async delete(req,res) {
     try {
-      const deleteDoctor = await Doctor.deleteOne({ _id: id })
+      const deleteDoctor = await Doctor.deleteOne({ name: req.body.name })
 
       if (deleteDoctor.matchedCount === 0) {
         res.status(422).json({ message: 'Doutor não encontrado!' })
