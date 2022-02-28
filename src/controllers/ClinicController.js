@@ -124,7 +124,7 @@ class ClinicController {
     const id = req.params.id
 
     try {
-      const deleteClinic = await Clinic.deleteOne({ _id: id })
+      const deleteClinic = await Clinic.deleteOne({ name: req.body.name })
 
       if (deleteClinic.matchedCount === 0) {
         res.status(422).json({ message: 'Doutor não encontrado!' })
