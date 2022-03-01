@@ -23,6 +23,7 @@ class App {
         'GET,HEAD,OPTIONS,POST,PUT,DELETE, PATCH',
       )
       res.setHeader('Access-Control-Allow-Headers', '*')
+      res.setHeader('Access-Control-Request-Headers','*')
       //Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
       this.app.use(cors('*'))
       next()
